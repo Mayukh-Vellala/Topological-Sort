@@ -1,0 +1,66 @@
+===== RESTART: C:/Users/lenovo/Desktop/DAA/realworld_outputs.py =====
+=== REAL-WORLD DATASETS FOR TOPOLOGICAL SORT ===
+
+SCENARIO 1: Build Dependency Graphs in Software Compilation Projects
+
+=== Dataset 1.1: Maven Build Dependencies ===
+Nodes: 9
+Kahn's result: Valid (length: 9)
+DFS result: Valid (length: 9)
+Kahn's time: 0.000056s, DFS time: 0.000038s
+Kahn's valid: True
+DFS valid: True
+
+=== Dataset 1.2: Linux Kernel Module Dependencies ===
+Nodes: 15
+Kahn's result: Valid (length: 15)
+DFS result: Valid (length: 15)
+Kahn's time: 0.000067s, DFS time: 0.000046s
+Kahn's valid: True
+DFS valid: True
+
+SCENARIO 2: Task Scheduling Data with Dependencies
+
+=== Dataset 2.1: Software Development Project Tasks ===
+Nodes: 9
+Kahn's result: Valid (length: 9)
+DFS result: Valid (length: 9)
+Kahn's time: 0.000038s, DFS time: 0.000025s
+Kahn's valid: True
+DFS valid: True
+
+=== Dataset 2.2: Manufacturing Assembly Line Tasks ===
+Nodes: 9
+Kahn's result: Valid (length: 9)
+DFS result: Valid (length: 9)
+Kahn's time: 0.000037s, DFS time: 0.000025s
+Kahn's valid: True
+DFS valid: True
+
+SCENARIO 3: Course Prerequisite Chains from University Catalogs
+
+=== Dataset 3.1: MIT Computer Science Curriculum ===
+Nodes: 12
+Kahn's result: Valid (length: 12)
+DFS result: Valid (length: 12)
+Kahn's time: 0.000042s, DFS time: 0.000029s
+Kahn's valid: True
+DFS valid: True
+
+=== Dataset 3.2: Stanford Computer Science Curriculum ===
+Nodes: 16
+Kahn's result: Valid (length: 16)
+DFS result: Valid (length: 16)
+Kahn's time: 0.000047s, DFS time: 0.000032s
+Kahn's valid: True
+DFS valid: True
+
+=== ALL REAL-WORLD DATASETS PROCESSED ===
+
+Summary of all datasets:
+- Build Dependencies: Maven and Linux Kernel
+- Task Scheduling: Software Development and Manufacturing
+- Course Prerequisites: MIT and Stanford CS Curricula
+
+All datasets were processed successfully with both algorithms.
+No cycles were detected in any of the real-world datasets.
