@@ -144,7 +144,7 @@ Performance was evaluated through the three experiments, confirming the theoreti
   Performance on six real-world datasets (Maven, Linux Kernel, Software Tasks, etc.) was **excellent**, completing almost instantaneously.  
   Confirms practical efficiency for realistic problem sizes.
 
-- **Starter Dataset (120 Nodes):**  
+- **Starter Dataset (160 Nodes):**  
   The starter dataset was processed correctly and efficiently by both algorithms, further validating correctness and scalability.
 
 **Space Complexity:**  
