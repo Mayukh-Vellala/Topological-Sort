@@ -1,0 +1,49 @@
+==== RESTART: C:/Users/lenovo/Desktop/DAA/tasks123_outputs.py ===
+=== TOPLOGICAL SORT IMPLEMENTATION FOR ALL THREE TASKS ===
+
+TASK 1: IMPLEMENTATION OF TOPOLOGICAL SORT ALGORITHMS
+Both Kahn's and DFS-based algorithms are implemented above.
+
+=== VALIDATION ON DAGS AND CYCLIC GRAPHS ===
+
+Test Case 1: Simple DAG
+Kahn's result: [0, 1, 2]
+DFS result: [0, 1, 2]
+Valid? True
+
+Test Case 2: Complex DAG
+Kahn's result: ['A', 'B', 'C', 'D']
+DFS result: ['A', 'C', 'B', 'D']
+Valid? True
+
+Test Case 3: Cyclic Graph
+Kahn's result: None (Cycle detected)
+DFS result: None (Cycle detected)
+
+=== DISCUSSION ON LIMITATIONS ===
+Topological sort is only defined for Directed Acyclic Graphs (DAGs).
+- If a cycle exists, no valid topological ordering exists because dependencies form a loop.
+- Both algorithms correctly detect cycles by returning None.
+- In real applications (like course prerequisites), cycles indicate logical errors that must be resolved manually.
+=== APPLICATION TO SCHEDULING AND DEPENDENCY RESOLUTION ===
+
+Example 1: Course Prerequisite Scheduler
+Course Schedule (Kahn): ['CS101', 'CS201', 'CS301', 'CS302', 'CS401']
+Course Schedule (DFS): ['CS101', 'CS201', 'CS302', 'CS301', 'CS401']
+Valid? True
+
+Example 2: Software Build Dependencies
+Build Order (Kahn): ['my-app', 'spring-boot-starter', 'mockito', 'spring-web', 'logback-classic', 'junit', 'spring-context', 'spring-core', 'slf4j-api']
+Build Order (DFS): ['my-app', 'spring-boot-starter', 'spring-web', 'spring-context', 'spring-core', 'logback-classic', 'slf4j-api', 'mockito', 'junit']
+Valid? True
+
+Example 3: Task Scheduling
+Task Order (Kahn): ['requirements', 'documentation', 'unit_tests', 'design', 'planning', 'code_review', 'implementation', 'testing', 'deployment']
+Task Order (DFS): ['unit_tests', 'code_review', 'documentation', 'requirements', 'planning', 'design', 'implementation', 'testing', 'deployment']
+Valid? True
+
+=== ALL THREE TASKS COMPLETED ===
+The implementation successfully addresses all three tasks:
+1. Implementation of topological sorting algorithms
+2. Validation on DAGs and discussion of limitations on cyclic graphs
+3. Application to scheduling and dependency resolution problems
