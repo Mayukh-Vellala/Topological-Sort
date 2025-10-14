@@ -24,5 +24,3 @@ Implemented in Python 3. The main functions `kahn_topological_sort` and `dfs_top
 
 *   **Yuvraj Singh Rajpurohit**
 *   **Mayukh Vellala**
-
-"Algorithms + Data Structures = Programs" — Niklaus Wirth
