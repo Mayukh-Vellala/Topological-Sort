@@ -1,0 +1,11 @@
+maven_dependencies = {
+    'junit': [],
+    'mockito': ['junit'],
+    'slf4j-api': [],
+    'logback-classic': ['slf4j-api'],
+    'spring-core': ['slf4j-api'],
+    'spring-context': ['spring-core', 'slf4j-api'],
+    'spring-web': ['spring-context', 'spring-core'],
+    'spring-boot-starter': ['spring-web', 'spring-context', 'logback-classic'],
+    'my-app': ['spring-boot-starter', 'junit', 'mockito'],
+}
