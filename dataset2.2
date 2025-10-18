@@ -1,0 +1,11 @@
+assembly_tasks = {
+    'component_a': ['assembly_step1'],
+    'component_b': ['assembly_step1'],
+    'assembly_step1': ['assembly_step2'],
+    'assembly_step2': ['quality_check'],
+    'quality_check': ['packaging'],
+    'packaging': [],
+    'component_c': ['assembly_step2'],
+    'final_inspection': ['packaging'],
+    'component_d': ['final_inspection'],
+}
