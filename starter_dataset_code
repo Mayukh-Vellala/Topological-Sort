@@ -1,0 +1,44 @@
+import random
+import json
+
+def generate_starter_dataset():
+    """
+    Generate a starter dataset with 120 nodes.
+    Uses topological ordering to ensure acyclicity.
+    """
+    n = 120  # Number of nodes as required
+    graph = {i: [] for i in range(n)}
+    
+    # Add edges from lower-indexed nodes to higher-indexed nodes
+    # This guarantees no cycles
+    for i in range(n):
+        for j in range(i + 1, n):
+            if random.random() < 0.3:  # 30% probability of edge
+                graph[i].append(j)
+    
+    return graph
+
+def save_starter_dataset():
+    """
+    Generate and save the starter dataset to a JSON file.
+    """
+    starter_dataset = generate_starter_dataset()
+    
+    print(f"Generated starter dataset with {len(starter_dataset)} nodes")
+    print(f"Total edges: {sum(len(neighbors) for neighbors in starter_dataset.values())}")
+    
+    # Save to JSON file
+    with open('starter_dataset.json', 'w') as f:
+        json.dump(starter_dataset, f, indent=2)
+    
+    print("Starter dataset saved to 'starter_dataset.json'")
+    
+    # Print first few nodes for verification
+    print("\nFirst 10 nodes with their connections:")
+    for i in range(min(10, len(starter_dataset))):
+        print(f"  Node {i}: {starter_dataset[i]}")
+    
+    return starter_dataset
+
+# Generate and save the starter dataset
+starter_dataset = save_starter_dataset()
